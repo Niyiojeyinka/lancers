@@ -19,6 +19,12 @@ class CreateStatesTable extends Migration
             $table->integer('country_id');
             $table->timestamps();
         });
+
+         //Insert Default State (Lagos)
+        DB::table('states')->insert(
+ array('name' =>'Lagos' ,
+        'country_id'=> 1         )
+        );
     }
 
     /**
