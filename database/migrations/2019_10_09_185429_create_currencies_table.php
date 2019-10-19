@@ -16,7 +16,7 @@ class CreateCurrenciesTable extends Migration
         Schema::create('currencies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('code', 10);
+            $table->string('code', 5);
             $table->string('symbol', 5);
             $table->timestamps();
         });
@@ -24,7 +24,7 @@ class CreateCurrenciesTable extends Migration
         //Insert Default Currency (Naira)
         DB::table('currencies')->insert(
  array('name' =>'Naira' ,
-        'code'=> '&#8358;',
+        'code'=> 'NGN',
         'symbol'=>'NGN'
          )
         );
