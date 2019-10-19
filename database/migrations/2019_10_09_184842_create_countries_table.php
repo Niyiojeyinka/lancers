@@ -18,6 +18,10 @@ class CreateCountriesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+        DB::table('countries')->insert(
+          array('name'=>'Nigeria'
+      )
+        );
     }
 
     /**
