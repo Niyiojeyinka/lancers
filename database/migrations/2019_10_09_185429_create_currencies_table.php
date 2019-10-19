@@ -20,6 +20,14 @@ class CreateCurrenciesTable extends Migration
             $table->string('symbol', 5);
             $table->timestamps();
         });
+
+        //Insert Default Currency (Naira)
+        DB::table('currencies')->insert(
+ array('name' =>'Naira' ,
+        'code'=> '&#8358;',
+        'symbol'=>'NGN'
+         )
+        );
     }
 
     /**
